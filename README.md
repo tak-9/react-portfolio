@@ -1,6 +1,6 @@
 # React Portfolio
 
-<img src="readme/screencapture.png" width=600px> 
+<img src="readme/screencapture.jpg" width=600px> 
 
 
 ### React
