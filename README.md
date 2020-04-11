@@ -24,7 +24,7 @@ This portfolio includes the following:
 https://create-react-app.dev/docs/deployment/#github-pages
 
 Follow the instructions in "Git Hub Pages".
-Then, Execute "git commit" and "git push" to upload the generated files by "npm deploy". 
+Then, execute "git commit" and "git push" to upload the generated files by "npm run deploy". 
 
 
 ## Usage 
