@@ -11,7 +11,7 @@ function Navbar(props) {
             className="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             
             <div className="container">
-                <Link to="/react-portfolio" className="navbar-brand js-scroll-trigger">Takuji Okubo</Link>
+                <Link to="/react-portfolio" className="navbar-brand js-scroll-trigger"><i class="fa fa-home"></i>&nbsp;Takuji Okubo</Link>
                 <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon" />
                 </button>
