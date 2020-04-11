@@ -121,9 +121,6 @@ function Portfolio() {
     var projectsRow = []; // projects up to three
     var allProjects =[]; // Array to keep projectsRow array(s)
     projects.forEach((project,i) => {
-        if (i !==0 && i % 3 === 0){
-            projectsRow = [];
-        }
         projectsRow.push(
             (
                 <Project 
@@ -138,6 +135,7 @@ function Portfolio() {
         );
         if (i % 3 === 2 || i === (projects.length - 1)) {
             allProjects.push(projectsRow);
+            projectsRow = [];
         }
     });
 
