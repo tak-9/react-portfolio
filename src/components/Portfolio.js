@@ -118,6 +118,42 @@ function Portfolio() {
         }
     ]
 
+    var projectsRow = []; // projects up to three
+    var allProjects =[]; // Array to keep projectsRow array(s)
+    projects.forEach((project,i) => {
+        if (i !==0 && i % 3 === 0){
+            projectsRow = [];
+        }
+        projectsRow.push(
+            (
+                <Project 
+                projectName = {project.projectName} 
+                projectSubDescription = {project.projectSubDescription}
+                screenCapture = {project.screenCapture}
+                projectDescription = {project.projectDescription}
+                demoUrl = {project.demoUrl} 
+                gitHubUrl = {project.gitHubUrl}
+                />
+            )
+        );
+        if (i % 3 === 2 || i === (projects.length - 1)) {
+            allProjects.push(projectsRow);
+        }
+    });
+
+    // Insert "pt-5" and "row" every three projects
+    // "pt-5" is top margin 5
+    var formattedProjects = allProjects.map((threeProjects, i)=>{
+        return (
+            <div>
+                <div className="pt-5" />
+                <div className="row">
+                    {threeProjects}
+                </div>
+            </div>
+        )
+    });
+
     return(
         <div>
             <Header whiteBar={true} />
@@ -133,75 +169,11 @@ function Portfolio() {
                             </p>
                         </div>
                     </div>
-                    <div className="pt-5">{/*top margin 5 */}
-                    <div className="row">
-
-                        <Project 
-                            projectName = {projects[0].projectName} 
-                            projectSubDescription = {projects[0].projectSubDescription}
-                            screenCapture = {projects[0].screenCapture}
-                            projectDescription = {projects[0].projectDescription}
-                            demoUrl = {projects[0].demoUrl} 
-                            gitHubUrl = {projects[0].gitHubUrl}
-                        />
-
-                        <Project 
-                            projectName = {projects[1].projectName} 
-                            projectSubDescription = {projects[1].projectSubDescription}
-                            screenCapture = {projects[1].screenCapture}
-                            projectDescription = {projects[1].projectDescription}
-                            demoUrl = {projects[1].demoUrl} 
-                            gitHubUrl = {projects[1].gitHubUrl}
-                        />
-
-                        <Project 
-                            projectName = {projects[2].projectName} 
-                            projectSubDescription = {projects[2].projectSubDescription}
-                            screenCapture = {projects[2].screenCapture}
-                            projectDescription = {projects[2].projectDescription}
-                            demoUrl = {projects[2].demoUrl} 
-                            gitHubUrl = {projects[2].gitHubUrl}
-                        />
-
-                    </div>  {/* Row end */}
-
-                    <div className="pt-5">{/*top margin 5 */}
-                    <div className="row">
-            
-                        <Project 
-                            projectName = {projects[3].projectName} 
-                            projectSubDescription = {projects[3].projectSubDescription}
-                            screenCapture = {projects[3].screenCapture}
-                            projectDescription = {projects[3].projectDescription}
-                            demoUrl = {projects[3].demoUrl} 
-                            gitHubUrl = {projects[3].gitHubUrl}
-                        />
-
-                        <Project 
-                            projectName = {projects[4].projectName} 
-                            projectSubDescription = {projects[4].projectSubDescription}
-                            screenCapture = {projects[4].screenCapture}
-                            projectDescription = {projects[4].projectDescription}
-                            demoUrl = {projects[4].demoUrl} 
-                            gitHubUrl = {projects[4].gitHubUrl}
-                        />
-
-                        <Project 
-                            projectName = {projects[5].projectName} 
-                            projectSubDescription = {projects[5].projectSubDescription}
-                            screenCapture = {projects[5].screenCapture}
-                            projectDescription = {projects[5].projectDescription}
-                            demoUrl = {projects[5].demoUrl} 
-                            gitHubUrl = {projects[5].gitHubUrl}
-                        />
-
-                    </div>  {/* Row end */}
+                    {formattedProjects}
                 </div>
-                </div>
-                </div>
-                </section>
-                <Footer fixed={true}/>
-            </div>
+            </section>
+            <Footer fixed={true}/>
+        </div>
     )
 }
 
