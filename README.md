@@ -27,6 +27,14 @@ Follow the instructions in "Git Hub Pages".
 Then, execute "git commit" and "git push" to upload the generated files by "npm run deploy". 
 
 
+* Use HashRouter as advised in "Notes on client-side routing". 
+
+
+If you use BrowserRouter, 404 is displayed for the following case: 
+* Open a browser. Then, enter URL (https://tak-9.github.io/react-portfolio/about) directly in browser's address bar.  
+* About page can only be displayed if you open top page (https://tak-9.github.io/react-portfolio) and click link in page.
+
+
 ## Usage 
 Access the following URL to open the web application.
 
