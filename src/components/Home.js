@@ -16,7 +16,7 @@ function Home() {
                 </div>
                 <div className="col-lg-8 align-self-baseline">
                     <p className="text-white-75 font-weight-light mb-5">An IT engineer in Sydney with experience in various roles such as a Java developer, Support engineer, Unix administrator and Technical translator.</p>
-                    <Link to="/react-portfolio/portfolio" className="btn btn-primary btn-xl js-scroll-trigger" >Find out more</Link>
+                    <Link to="/portfolio" className="btn btn-primary btn-xl js-scroll-trigger" >Find out more</Link>
                 </div>
                 </div>
             </div>

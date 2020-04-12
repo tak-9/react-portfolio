@@ -1,6 +1,6 @@
 import React from 'react';
 import './css/creative.css';
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 
 import About from './components/About';
 import Home from './components/Home';
@@ -11,15 +11,15 @@ import NotFound from './components/NotFound';
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <HashRouter basename="/react-portfolio">
         <Switch>
-          <Route exact path="/react-portfolio" component={Home} />
-          <Route exact path="/react-portfolio/about" component={About} />
-          <Route exact path="/react-portfolio/portfolio" component={Portfolio} />
-          <Route exact path="/react-portfolio/contact" component={Contact} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/portfolio" component={Portfolio} />
+          <Route exact path="/contact" component={Contact} />
           <Route component={NotFound} />
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
