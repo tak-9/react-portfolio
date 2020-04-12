@@ -11,7 +11,7 @@ import NotFound from './components/NotFound';
 function App() {
   return (
     <div>
-      <HashRouter basename="/react-portfolio">
+      <HashRouter basename="/">
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
